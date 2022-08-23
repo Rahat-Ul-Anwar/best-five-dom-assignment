@@ -17,10 +17,7 @@
                 <div class="col-sm-6">
                 <div class="">
                     <h1 class="text-danger text-center">Select Your Best Five</h1>
-                    <p class="text-white text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-
-                    </p>
-                   </div>
+                </div>
                 </div>
                 <div class="col-sm-3">  
                     <img class="img-fluid" src="images/Card-psg.png" alt="" srcset="">
@@ -39,53 +36,52 @@
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (1).png " class="card-img-top" alt="...">
                                   <div class="card-body">
-                                    <h5 class="card-title">Lionel Messi</h5>
-                                    <p class="card-text">This is a wider card with supporting  </p>
+                                    <h5 class="card-title">Kylian Mbappé</h5>
+                                  
                                     
-                                    <button class="btn btn-primary">Select</button>
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (2).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Neymar Jr</h5>
-                                    <p class="card-text">This card has</p>
-                                    <button class="btn btn-primary">Select</button>
+                                  
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
-                                  <img src="images/Rectangle 144 (3).png" class="card-img-top" alt="...">
+                                  <img src="images/lionel andres messi.png" class="card-img-top" alt="...">
                                   <div class="card-body">
-                                    <h5 class="card-title">Kylian Mbappé</h5>
-                                    <p class="card-text">This is a wider card with</p>
-                                    <button class="btn btn-primary">Select</button>
+                                    <h5 class="card-title">Lionel Messi</h5>
+                                  
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                             </div>
                             <div class="card-group">
                                 <div class="card m-3">
-                                  <img src="images/Rectangle 144 (4).png" class="card-img-top" alt="...">
+                                  <img src="images/Rectangle 144 (3).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Vítor Machado</h5>
-                                    <p class="card-text">This is a wider card with supporting  </p>
+                                   
                                     
-                                    <button class="btn btn-primary">Select</button>
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
-                                  <img src="images/Rectangle 144 (5).png" class="card-img-top" alt="...">
+                                  <img src="images/Rectangle 144 (4).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Sergio Ramos</h5>
-                                    <p class="card-text">This card has supporting  .</p>
-                                    <button class="btn btn-primary">Select</button>
+                                   
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (5).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Renato Sanches</h5>
-                                    <p class="card-text">This is a wider card with</p>
-                                    <button class="btn btn-primary">Select</button>
+                                    <button class="btn btn-primary col-6">Select</button>
                                   </div>
                                 </div>
                             </div>
@@ -93,7 +89,7 @@
                     </div>
                     <div class="col-sm-3">
                        <div class=" p-3 bg-dark">
-                         <h5 class="text-light text-center">Selected - V</h5>
+                         <h5 class="text-light text-center">Selected -<span id="selected">0</span></h5>
                             <ol class="text-light" id="all-players" >
                                 <!-- <li>Leonel Messi</li>
                                 <li>Kylian Mbappé</li>
@@ -106,21 +102,21 @@
 
                        <!-- Budget section -->
                        <h4 class="text-white text-center">Budget</h4>
-                       <label for="exampleInputText" class="form-label text-white">Per Player</label>
-                       <input type="text" name="" id="exampleInputText">
+                       <label for="input-text-player" class="form-label text-white">Per Player</label>
+                       <input type="text" name="" id="input-text-player">
                        <br><br>
-                       <button class=" col-6 btn btn-primary mx-auto">Calculate</button>
+                       <button id="calculate-button" class=" col-6 btn btn-primary mx-auto">Calculate</button>
                        <br>
                        <br>
-                       <h6 class="text-white">Player Expenses: <span> 5000</span> </h6>
-                       <label for="exampleInputText" class="form-label text-white">Manager</label>
-                       <input type="text" name="" id="exampleInputText">
+                       <h6 class="text-white">Player Expenses: <span id="player-expenses">00</span> </h6>
+                       <label for="input-text-manager" class="form-label text-white">Manager</label>
+                       <input type="text" name="" id="input-text-manager">
                        <br><br>
-                       <label for="exampleInputText" class="form-label text-white">Coach</label>
-                       <input type="text" name="" id="exampleInputText">
+                       <label for="input-text-coach" class="form-label text-white">Coach</label>
+                       <input type="text" name="" id="input-text-coach">
                        <br><br>
 
-                       <button class=" col-6 btn btn-primary mx-auto">Calculate Total</button>
+                       <button id="calculate-total-btn" class=" col-6 btn btn-primary mx-auto">Calculate Total</button>
                        <br><br>
                        <h6 class="text-white">Total: <span> 5000</span> </h6>
                     </div>
@@ -136,5 +132,6 @@
 
     </script>
     <script src="js/index.js"></script>
+    <script src="js/selection.js"></script>
   </body>
 </html>
