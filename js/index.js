@@ -1,4 +1,6 @@
- const playerButtons = document.querySelectorAll('.card-group button');
+ //to get all the button
+
+const playerButtons = document.querySelectorAll('.card-group button');
 
 const allPlayers = document.getElementById('all-players');
 
@@ -12,7 +14,7 @@ for (let i = 0; i < playerButtons.length; i++){
      //getting selected player number
      const selected = document.getElementById('selected');
                         
-    //calling a function
+    //calling  selective player function
       const selectedNum =  selectivePlayer('selected');
         
         if (selectedNum > 5) {
@@ -41,10 +43,8 @@ for (let i = 0; i < playerButtons.length; i++){
             playerButton.style.backgroundColor = 'goldenrod';
             playerButton.style.color = 'black';
             
-    }
-    })
-        
-    }
+    }})
+}
 
 
 //*******************************     selected player and their expenses   **********************************
@@ -112,17 +112,16 @@ const coach = document.getElementById('input-text-coach');
 const calculateTotalButton = document.getElementById('calculate-total-btn');
 
 calculateTotalButton.addEventListener('click', function () {
-    // const budgetAmount = budgetCalculte('input-text-player');
-   
-    const allplayerExpenses = playerExpenses('player-expenses');
-    
-const managerString = manager.value;
-const managerAmount = parseInt(managerString);
-const coachString = coach.value;
-const coachAmount = parseInt(coachString);
-    
+
+    //  calling the allplayersExpenses function to get the amount
+   const allplayerExpenses = playerExpenses('player-expenses');
+        
+    const managerString = manager.value;
+    const managerAmount = parseInt(managerString);
+    const coachString = coach.value;
+    const coachAmount = parseInt(coachString);
+        
 const calculateTotal = allplayerExpenses + managerAmount + coachAmount;
-    console.log(calculateTotal);
     
 // get final total
     
@@ -130,7 +129,6 @@ const calculateTotal = allplayerExpenses + managerAmount + coachAmount;
     const finalTotalString = finalTotal.innerText;
     const finalTotalAmount = parseInt(finalTotalString);
     finalTotal.innerText = calculateTotal;
-    
  })
 
 

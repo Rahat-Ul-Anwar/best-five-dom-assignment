@@ -6,29 +6,36 @@
     <title>Top 5 best</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- ********************header section start************************************ -->
     <header>
-        <div class="container-fluid bg-dark pt-5">
-            <div class="row d-flex align-items-center justify-content-around">
-                <div class="col-sm-3">  
-                    <img class="img-fluid" src="images/embappe.png" alt="" srcset="">
-                </div>
-                <div class="col-sm-6">
-                <div class="">
-                    <h1 class="text-danger text-center">Best 5 world class football players</h1>
-                    <p class="text-white text-center">We've based our list on a variety of factors. We have taken short-term form into account, but particularly strong or weak 2021/22 seasons have been overlooked in many cases so that players with a long history of incredible performances aren't shunted down at the first opportunity.</p>
-                </div>
-                </div>
-                <div class="col-sm-3">  
-                    <img class="img-fluid" src="images/Card-psg.png" alt="" srcset="">
-                </div>
+        <div class="container-fluid bg-image-football bg-image-cirle pt-5">
+            <div class="row d-flex  justify-content-around">
+                  <div class="col-sm-3">  
+                      <img class="img-fluid" src="images/embappe.png" alt="" srcset="">
+                      </div>
+                        <div class="col-sm-6">
+                          <div class="py-5">
+                              <h1 class="text-center text-orange">Green Bay Packers</h1>
+                              <p class="text-white text-center">The 2021 season was the Green Bay Packers' 101st season in the National Football League, their 103rd overall and their third under head coach Matt LaFleur.With a Week 15 win over the Baltimore Ravens, the Packers won the NFC North for the third consecutive year</p>
+                          </div>
+                    </div>
+                      <div class="col-sm-3">  
+                          <img class="img-fluid" src="images/Card-psg.png" alt="" srcset="">
+                      </div>
             </div>
         </div>
     </header>
-<!-- Player selection section -->
-    <main class="bg-dark ">
-        <section class="container mt-5">
+     <!-- ********************header section start************************************ -->
+
+
+<!-- ****************************Player selection section  start *******************************-->
+
+    <main class="bg-dark">
+        <section class="container py-5 ">
          
                 <div class="row">
                     <div class="col-sm-9">
@@ -36,19 +43,17 @@
                             <div class="card-group">
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (1).png " class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Kylian Mbappé</h5>
-                                  
-                                    
-                                    <button class="btn btn-primary col-6">Select</button>
-                                  </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title">Kylian Mbappé</h5>
+                                    <button class="btn btn-primary col-6">SELECT</button>
+                                    </div>
                                 </div>
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (2).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Neymar Jr</h5>
                                   
-                                    <button class="btn btn-primary col-6">Select</button>
+                                    <button class="btn btn-primary col-6">SELECT</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
@@ -56,7 +61,7 @@
                                   <div class="card-body">
                                     <h5 class="card-title">Lionel Messi</h5>
                                   
-                                    <button class="btn btn-primary col-6">Select</button>
+                                    <button class="btn btn-primary col-6">SELECT</button>
                                   </div>
                                 </div>
                             </div>
@@ -67,7 +72,7 @@
                                     <h5 class="card-title">Vítor Machado</h5>
                                    
                                     
-                                    <button class="btn btn-primary col-6">Select</button>
+                                    <button class="btn btn-primary col-6">SELECT</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
@@ -75,21 +80,24 @@
                                   <div class="card-body">
                                     <h5 class="card-title">Sergio Ramos</h5>
                                    
-                                    <button class="btn btn-primary col-6">Select</button>
+                                    <button class="btn btn-primary col-6">SELECT</button>
                                   </div>
                                 </div>
                                 <div class="card m-3">
                                   <img src="images/Rectangle 144 (5).png" class="card-img-top" alt="...">
                                   <div class="card-body">
                                     <h5 class="card-title">Renato Sanches</h5>
-                                    <button class="btn btn-primary col-6">Select</button>
+                                    <button class="btn btn-primary col-6">SELECT</button>
                                   </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+  <!-- ******************Player selection section end *********************-->
+
+  <!-- ********************players showing section ************************* -->
                     <div class="col-sm-3">
-                       <div class=" p-3 bg-dark">
+                       <div class=" p-3 bg-selected">
                          <h5 class="text-light text-center">Selected -<span id="selected">0</span></h5>
                             <ol class="text-light" id="all-players" >
                                 <!-- <li>Leonel Messi</li>
@@ -100,27 +108,52 @@
                             </ol>
 
                        </div>
+                    
+            <!-- **********************Budget section************************ -->
+                  <div class="bg-selected p-3 mt-5">
+                     
+                     
 
-                       <!-- Budget section -->
-                       <h4 class="text-white text-center">Budget</h4>
-                       <label for="input-text-player" class="form-label text-white">Per Player</label>
-                       <input type="text" name="" id="input-text-player">
-                       <br><br>
-                       <button id="calculate-button" class=" col-6 btn btn-primary mx-auto">Calculate</button>
-                       <br>
-                       <br>
-                       <h6 class="text-white">Player Expenses: <span id="player-expenses">00</span> </h6>
-                       <label for="input-text-manager" class="form-label text-white">Manager</label>
-                       <input type="text" name="" id="input-text-manager">
-                       <br><br>
-                       <label for="input-text-coach" class="form-label text-white">Coach</label>
-                       <input type="text" name="" id="input-text-coach">
-                       <br><br>
-
-                       <button id="calculate-total-btn" class=" col-6 btn btn-primary mx-auto">Calculate Total</button>
-                       <br><br>
-                       <h6 class="text-white">Total: <span id="final-total"> 00</span> </h6>
+                      <div class="row g-2 mt-3">
+                        <h4 class="text-white text-center">Budget</h4>
+                        <div class="col-sm-4">
+                          <label for="input-text-player" class="form-label text-white">Per Player</label>
+                        </div>
+                        <div class="col-sm-4">
+                             
+                          <input type="text" name="" id="input-text-player">
+                        </div>
+                      
+                   
+                      <br><br>
+                      <button id="calculate-button" class=" col-6 btn btn-primary mx-auto">Calculate</button>
+                      <br>
+                      <br>
+                      <h6 class="text-white">Player Expenses: <span id="player-expenses">00</span> </h6>
+                     </div>
+                <!-- manager and coach section      -->
+                    <div class="row g-4 mt-3">
+                          <div class="col-sm-3">
+                            <label for="input-text-manager" class="form-label text-white">Manager</label>
+                          </div>
+                          <div class="col-sm-7">
+                            <input type="text" name="" id="input-text-manager">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="input-text-coach" class="form-label text-white">Coach</label>
+                          </div>
+                        
+                          <div class="col-sm-7">
+                            <input type="text" name="" id="input-text-coach">
+                          </div>
+                          <button id="calculate-total-btn" class="col-6 btn btn-primary m-4">Calculate Total</button>
+                          <br><br>
+                          <h6 class="text-white">Total: <span id="final-total"> 00</span> </h6>
                     </div>
+                  </div>
+                    
+                      </div>
+                      </div>
                 </div>
            
         </section>
@@ -132,6 +165,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
 
     </script>
+    <!-- ***************javascript link**************** -->
     <script src="js/index.js"></script>
     <script src="js/selection.js"></script>
   </body>
