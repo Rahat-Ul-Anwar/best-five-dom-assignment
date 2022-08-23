@@ -48,7 +48,7 @@ for (let i = 0; i < playerButtons.length; i++){
                     // const selectedNumber = parseInt(selectedString);
                     // const newSelectedNum = selectedNumber + 1;
         
-        //callin a function
+        //calling a function
       const selectedNum =  selectivePlayer('selected');
         
         if (selectedNum > 5) {
@@ -77,10 +77,10 @@ for (let i = 0; i < playerButtons.length; i++){
             playerButton.style.backgroundColor = 'goldenrod';
             playerButton.style.color = 'black';
             
-}
+    }
     })
-    
-}
+        
+    }
 
 
 //*******************************     selected player and their expenses   **********************************
@@ -90,27 +90,51 @@ const calculateButton = document.getElementById('calculate-button');
 
 calculateButton.addEventListener('click', function () {
      
-    const selectedNum =  selectivePlayer('selected');
-    //input field for Budget
+    const selectedNum = selectivePlayer('selected');
     
-    const inputFieldPlayer = document.getElementById('input-text-player');
-    const inputFieldPlayerString = inputFieldPlayer.value;
-    const inputFieldPlayerAmount = parseInt(inputFieldPlayerString);
- 
-    //get the player expenses
-    const playerExpenses = document.getElementById('player-expenses');
-    const playerExpensesString = playerExpenses.innerText;
-    const playerExpensesAmount = parseInt(playerExpensesString);
-    const expenses = inputFieldPlayerAmount * selectedNum;
+    //calling budget calculator function
+    const budgetAmount = budgetCalculte('input-text-player');
+    // const inputFieldPlayer = document.getElementById('input-text-player');
+    // const inputFieldPlayerString = inputFieldPlayer.value;
+    // const inputFieldPlayerAmount = parseInt(inputFieldPlayerString);
 
-    console.log(expenses);
-    playerExpenses.innerText = expenses;
+    const allplayerExpenses = playerExpenses('player-expenses');
+    //get the player expenses
+    // const playerExpenses = document.getElementById('player-expenses');
+    // const playerExpensesString = playerExpenses.innerText;
+    // const playerExpensesAmount = parseInt(playerExpensesString);
+    // const expenses = budgetAmount * (selectedNum - 1);
+    // playerExpenses.innerText = expenses;
     
 })
+
+// player expenses function
+
+function playerExpenses(expensesId) {
+    const budgetAmount = budgetCalculte('input-text-player');
+    const selectedNum = selectivePlayer('selected');
+    const playerExpensesElement = document.getElementById(expensesId);
+    const playerExpensesString = playerExpensesElement.innerText;
+    const playerExpensesAmount = parseInt(playerExpensesString);
+    const expenses = budgetAmount * (selectedNum - 1);
+    playerExpensesElement.innerText = expenses;
+    return expenses;
+  }
+
+// budget calculator
+function budgetCalculte(budgetId) {
+     
+    const inputFieldPlayer = document.getElementById(budgetId);
+    const inputFieldPlayerString = inputFieldPlayer.value;
+    const inputFieldPlayerAmount = parseInt(inputFieldPlayerString);
+    return inputFieldPlayerAmount;
+
+ }
  
 
  //common function
- function selectivePlayer(id) {
+
+   function selectivePlayer(id) {
 
     const selected = document.getElementById(id);
             
@@ -120,5 +144,38 @@ calculateButton.addEventListener('click', function () {
         
     return newSelectedNum;  
     
-    }
+}
+
+//**************************manager and coach section*************************
+const manager = document.getElementById('input-text-manager');
+const coach = document.getElementById('input-text-coach');
+//to get manager
+
+const calculateTotalButton = document.getElementById('calculate-total-btn');
+
+calculateTotalButton.addEventListener('click', function () {
+    // const budgetAmount = budgetCalculte('input-text-player');
+   
+    const allplayerExpenses = playerExpenses('player-expenses');
+    
+const managerString = manager.value;
+const managerAmount = parseInt(managerString);
+const coachString = coach.value;
+const coachAmount = parseInt(coachString);
+    
+const calculateTotal = allplayerExpenses + managerAmount + coachAmount;
+    console.log(calculateTotal);
+    
+// get final total
+    
+    const finalTotal = document.getElementById('final-total');
+    const finalTotalString = finalTotal.innerText;
+    const finalTotalAmount = parseInt(finalTotalString);
+    finalTotal.innerText = calculateTotal;
+    
+ })
+
+
+
+
 

@@ -24,5 +24,13 @@
     
 // })
 
+// player expenses function
 
+// function playerExpenses(expensesId) {
+//     const playerExpensesElement = document.getElementById(expensesId);
+//     const playerExpensesString = playerExpenses.innerText;
+//     const playerExpensesAmount = parseInt(playerExpensesString);
+//     const expenses = budgetAmount * (selectedNum - 1);
+//     playerExpenses.innerText = expenses;
+//   }
 
